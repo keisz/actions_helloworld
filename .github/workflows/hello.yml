@@ -7,4 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: docker --version
-      
+      - uses: docker://alpine:3.11
+        with:
+          entrypoint: /bin/echo
+          args: Hello, World!
